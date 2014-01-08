@@ -149,29 +149,77 @@ Or handlebars helper
 ```js
 var html = require('templates/my-share'),
     tpl = require('lodash-template'),
-    template = tpl(html),
     domify = require('domify');
 
-function MyShare(el) {
-    this.options = el.dataset;
+var template = tpl(html);
+
+function MyShare(options) {
+    this.options = options;
     this.el = domify(template(this.options));
 
     this._bindEvents();
-    el.parentNode.replaceChild(this.el, el);
 }
 
 MyShare.prototype._bindEvents = function () {
-    this.el.addEventListener('click', function () {
-        window.open(this.getShareUrl());
-        element.preventDefault();
+    this.el.addEventListener('click', function (e) {
+        window.open(this.shareUrl());
+        e.preventDefault();
     }.bind(this), false);
 };
 
-MyShare.prototype.getShareUrl = function () {
+MyShare.prototype.shareUrl = function () {
     // TODO
 };
 
 module.exports = MyShare;
+```
+
+```js
+// declare.js
+var components = {};
+
+exports.register = function (selector, Constructor) {
+    components[selector] = Constructor;
+};
+
+exports.registerAll = function (registry) {
+    for (var selector in registry) {
+        exports.register(selector, registry[selector]);
+    }
+};
+
+exports.init = function (root) {
+    root = root || document;
+
+    for (var selector in components) {
+        var elements = root.querySelectorAll(selector),
+            Constructor = components[selector];
+
+        for (var i = 0; i < elements.length; i++) {
+            var el = elements[i],
+                parent = el.parentNode;
+
+            if (parent && !el.instance) {
+                var instance = new Constructor(el.dataset);
+                parent.replaceChild(instance.el, el);
+                // back ref
+                instance.el.instance = instance;
+            }
+        }
+    }
+};
+```
+
+```
+// index.js
+var declare = require('declare'),
+    domready = require('domready'),
+    registry = require('registry');
+
+domready(function () {
+    declare.registerAll(registry);
+    declare.init();
+});
 ```
 
      * Isolation

@@ -63,7 +63,7 @@
         <ul>
             <li>Havy
                 <ul>
-                    <li>jQuery 2.0.3 &mdash; 230Kb (no pack, no gzip)</li>
+                    <li>jQuery 2.0.3 &mdash; 230K (unpacked)</li>
                 </ul>
             </li>
             <li class="next">Hard to understand
@@ -80,9 +80,9 @@
     </section>
 
     <section class="slide">
-        <h2>Hard to extract a small part</h2>
+        <h2>Libraries are tightly coupled</h2>
         <ul>
-            <li>Libraries are tightly coupled
+            <li>Hard to extract a small part
                 <ul>
                     <li>$.Deferred, $.ajax</li>
                     <li>$.template</li>
@@ -96,7 +96,7 @@
     <section class="slide">
         <h2>Dependencies management</h2>
         <ul>
-            <li>Many of them are depend on jQuery</li>
+            <li>Dependency on jQuery</li>
             <li class="next">Libraries requires libraries
                 <ul>
                     <li>Backbone+jQuery+Underscore</li>
@@ -149,21 +149,12 @@
 
     <section class="slide cover h w c" style="background: #fff">
         <h2>Component way</h2>
-        <div><img src="pictures/lego-bricks.svg"/></div>
+        <div><img src="pictures/block.jpg"/></div>
     </section>
 
-    <section class="slide">
-        <h2>Key features of Components</h2>
-        <ul>
-            <li>Simple
-                <ul>
-                    <li>KISS Principle</li>
-                    <li>Single responsibility</li>
-                </ul>
-            </li>
-            <li class="next">Standalone</li>
-            <li class="next">Isolated</li>
-        </ul>
+    <section class="slide cover h w c" style="background: #fff">
+        <h2>Simple</h2>
+        <div><img src="pictures/board.jpg"/></div>
     </section>
 
     <section class="slide">
@@ -171,20 +162,22 @@
         <ul>
             <li>Lightweight
                 <ul>
-                    <li>(example:size of some libs)</li>
+                    <li><a href="https://github.com/component/dom">dom</a> &mdash; 28K, 3K self (unpacked)</li>
                 </ul>
             </li>
-            <li class="next">Only what you need
-                <ul>
-                    <li>(better code usage)</li>
-                </ul>
-            </li>
+            <li class="next">Single responsibility & KISS Principle</li>
             <li class="next">Easy to understand
                 <ul>
-                    <li>(example:low CC)</li>
+                    <li>Maintain</li>
+                    <li>Write tests</li>
                 </ul>
             </li>
         </ul>
+    </section>
+
+    <section class="slide cover h w c" style="background: #fff">
+        <h2>Standalone & Isolated</h2>
+        <div><img src="pictures/stand-alone.jpg"/></div>
     </section>
 
     <section class="slide">
@@ -195,7 +188,7 @@
                     <li>Most of them are external</li>
                 </ul>
             </li>
-            <li class="next">Easier to reuse
+            <li class="next">Easy to reuse
                 <ul>
                     <li><code>bower i name</code></li>
                     <li><code>npm i name</code></li>
@@ -286,6 +279,10 @@
         </ul>
     </section>
 
+    <section class="slide cover h c" style="background: #fff">
+        <div><img src="pictures/bem.jpg"/></div>
+    </section>
+
     <section class="slide">
         <h2>BEM briefly</h2>
         <ul>
@@ -323,8 +320,13 @@
         </ul>
     </section>
 
+    <section class="slide cover w c" style="background: #fff">
+        <h2>Package file</h2>
+        <div><img src="pictures/contract.jpg"/></div>
+    </section>
+
     <section class="slide">
-        <h2>Package is a foundation</h2>
+        <h2>Package file is the contract</h2>
         <pre class="javascript">
             <code>// bower.json</code>
             <code>{</code>
@@ -336,8 +338,13 @@
         <p><a href="http://bower.io/">Bower</a> and format of <a href="http://bower.io/#defining-a-package">bower.json</a></p>
     </section>
 
+    <section class="slide cover w c" style="background: #fff">
+        <h2>HTML Layout</h2>
+        <div><img src="pictures/plan.jpg"/></div>
+    </section>
+
     <section class="slide">
-        <h2>Component private HTML Layout</h2>
+        <h2>Private HTML Layout</h2>
         <pre class="html">
             <code>&lt;!-- my-share.html --&gt;</code>
             <code>&lt;a href="<mark>{{ href }}</mark>" class="my-share"&gt;</code>
@@ -348,8 +355,13 @@
         <p>This template is written using <a href="http://bem.info/">BEM</a> Methodology.</p>
     </section>
 
+    <section class="slide cover w c" style="background: #fff">
+        <h2>Interface</h2>
+        <div><img src="pictures/door.jpg"/></div>
+    </section>
+
     <section class="slide">
-        <h2>Component interface</h2>
+        <h2>Interface</h2>
         <pre class="html">
             <code>&lt;a class="my-share"</code>
             <code>   data-href="<mark>{{ href }}</mark>"</code>
@@ -381,6 +393,11 @@
             <code>}</code>
         </pre>
         <p>We remain font-size and text-decoration untouched.</p>
+    </section>
+
+    <section class="slide cover w c" style="background: #fff">
+        <h2>Dependencies</h2>
+        <div><img src="pictures/deps.jpg"/></div>
     </section>
 
     <section class="slide">

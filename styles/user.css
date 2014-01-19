@@ -266,3 +266,23 @@ button.run.pressin:active {
 .slide ol, .slide ul {
     font-size: 35px;
 }
+
+table {
+    margin: 0 0 50px;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+tr {
+    border-bottom: solid 1px #ccc;
+}
+
+th {
+    text-align: left;
+    font-weight: bold;
+}
+
+table.striped tr:nth-child(even) {
+    background:#EEE;
+}

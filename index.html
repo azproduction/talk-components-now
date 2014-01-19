@@ -36,20 +36,21 @@
     </section>
 
     <section class="slide cover h c">
-        <h2>Libraries (image)</h2>
-        <div><img src=""/></div>
+        <h2>Code libraries</h2>
+        <div><img src="pictures/books.jpg"/></div>
     </section>
 
     <section class="slide">
         <h2>Libraries</h2>
         <ul>
             <li>jQuery &mdash; fixes DOM</li>
-            <li>Underscore &mdash; fills ECMAScript 3-5 gap</li>
-            <li>Backbone &mdash; brings MV*</li>
+            <li class="next">Underscore &mdash; fills ECMAScript 3-5 gap</li>
+            <li class="next">Backbone &mdash; brings MV*</li>
             <li class="next">They are born to fix Web</li>
         </ul>
-        <p>For some historical reasons many good tools are libraries</p>
-        <a href="http://ejohn.org/blog/the-dom-is-a-mess/">The DOM is a Mess</a>
+        <p>For some historical reasons many good tools are libraries.<br/>
+            <a href="http://ejohn.org/blog/the-dom-is-a-mess/">The DOM is a Mess</a> 2009
+        </p>
     </section>
 
     <section class="slide cover h c">
@@ -62,35 +63,40 @@
         <ul>
             <li>Havy
                 <ul>
-                    <li>(example:size of some libs)</li>
+                    <li>jQuery 2.0.3 &mdash; 230Kb (no pack, no gzip)</li>
                 </ul>
             </li>
             <li class="next">Hard to understand
                 <ul>
-                    <li>(example:CC of jQuery)</li>
+                    <li>Cyclomatic complexity of $.ajax &mdash; <a href="http://es-analysis.github.io/plato/examples/jquery/files/src_ajax_js/index.html">43</a></li>
                 </ul>
             </li>
             <li class="next">Too powerful
                 <ul>
-                    <li>(example: $.ajax, ...)</li>
+                    <li>$.ajax, $.animate, _</li>
                 </ul>
             </li>
         </ul>
     </section>
 
     <section class="slide">
-        <h2>Hard to extract a part</h2>
+        <h2>Hard to extract a small part</h2>
         <ul>
+            <li>Libraries are tightly coupled
+                <ul>
+                    <li>$.Deferred, $.ajax</li>
+                    <li>$.template</li>
+                </ul>
+            </li>
             <li>Manual extraction</li>
-            <li>HowTos and Makefiles</li>
-            <li>Use own build web services</li>
+            <li>Use build Web-services</li>
         </ul>
     </section>
 
     <section class="slide">
         <h2>Dependencies management</h2>
         <ul>
-            <li>Depend on jQuery</li>
+            <li>Many of them are depend on jQuery</li>
             <li class="next">Libraries requires libraries
                 <ul>
                     <li>Backbone+jQuery+Underscore</li>
@@ -109,42 +115,59 @@
         <div><img src=""/></div>
     </section>
 
+    <section class="slide cover h w c">
+        <div><a href="http://acid3.acidtests.org/"><img src="pictures/acid3.png" alt="ACID3 test result"/></a></div>
+    </section>
+
     <section class="slide">
-        <h2>ACID 3</h2>
+        <h2>Critical DOM APIs</h2>
         <ul>
-            <li>Internet Explorer 9 - Pass</li>
-            <li>Opera, Firefox, Chromium, Safari - Pass</li>
+            <li>querySelector</li>
+            <li>CSS3 Selectors*</li>
+            <li>Web Storage (localStorage)</li>
+            <li>Cross-Origin Resource Sharing*</li>
         </ul>
-        <p>This section is incomplete or may change to image</p>
+        <p>* fully with polyfills<br/>
+            <a href="http://caniuse.com/">Can I Use</a>
+        </p>
+    </section>
+
+    <section class="slide cover h w c">
+        <div><a href="http://kangax.github.io/es5-compat-table/"><img src="pictures/es5-compat.png" alt="ECMAScript 5 compatibility table"/></a></div>
     </section>
 
     <section class="slide">
-        <h2>DOM APIs</h2>
+        <h2>Polyfills can fix the rest</h2>
         <ul>
-            <li>(example:can i use statistics)</li>
+            <li><a href="http://selectivizr.com/">CSS3 Selectors</a> (slow, not recommended)</li>
+            <li><a href="https://github.com/flensed/flXHR">Cross-Origin Resource Sharing</a></li>
+            <li><a href="https://code.google.com/p/html5shiv/">HTML5 Elements</a></li>
+            <li><a href="https://github.com/es-shims/es5-shim/">ECMAScript 5</a></li>
         </ul>
-        <p>This section is incomplete</p>
+        <p><a href="http://html5please.com/#polyfill">HTML5 Please polyfills</a></p>
+    </section>
+
+    <section class="slide cover h w c" style="background: #fff">
+        <h2>Component way</h2>
+        <div><img src="pictures/lego-bricks.svg"/></div>
     </section>
 
     <section class="slide">
-        <h2>ECMAScript 5</h2>
+        <h2>Key features of Components</h2>
         <ul>
-            <li>(example:statistics)</li>
+            <li>Simple
+                <ul>
+                    <li>KISS Principle</li>
+                    <li>Single responsibility</li>
+                </ul>
+            </li>
+            <li class="next">Standalone</li>
+            <li class="next">Isolated</li>
         </ul>
-        <p>This section is incomplete</p>
-    </section>
-
-    <section class="slide shout">
-        <h2>Polyfills fixes the rest</h2>
-    </section>
-
-    <section class="slide cover h c">
-        <h2>Component way (image)</h2>
-        <div><img src=""/></div>
     </section>
 
     <section class="slide">
-        <h2>Components are Small</h2>
+        <h2>Components are simple</h2>
         <ul>
             <li>Lightweight
                 <ul>
@@ -165,7 +188,7 @@
     </section>
 
     <section class="slide">
-        <h2>Components are Standalone</h2>
+        <h2>Components are standalone</h2>
         <ul>
             <li>Contain all dependencies
                 <ul>
@@ -183,60 +206,121 @@
     </section>
 
     <section class="slide">
-        <h2>Tools for build components</h2>
+        <h2>Components are isolated</h2>
         <ul>
-            <li>Package managers
+            <li>Do not interfere with others
                 <ul>
-                    <li>bower, npm, component</li>
+                    <li>Scoped CSS</li>
+                    <li>Flexible layout</li>
+                    <li>No globals leak</li>
                 </ul>
             </li>
-            <li class="next">Test runners
+            <li class="next">Has restricted access to others
                 <ul>
-                    <li>Mocha, Karma</li>
-                </ul>
-            </li>
-            <li class="next">Management utils
-                <ul>
-                    <li>JSHint, jscs, csslint, csso, imgo</li>
+                    <li><code>require()</code></li>
                 </ul>
             </li>
         </ul>
     </section>
 
-    <section class="slide cover h c">
-        <h2>WebComponents (image)</h2>
-        <div><img src=""/></div>
+    <section class="slide">
+        <h2>Other ingredients</h2>
+        <ul>
+            <li>Declarative</li>
+            <li>Data-driven</li>
+            <li>Lazy loaded</li>
+        </ul>
+    </section>
+
+    <section class="slide cover h c" style="background: #fff">
+        <div><img src="pictures/web-components.jpg" alt="WebComponents"/></div>
     </section>
 
     <section class="slide">
-        <h2>WebComponents</h2>
-        <ol>
-            <li>Idea of Custom Elements</li>
-            <li class="next">API
+        <h2>WebComponents is API</h2>
+        <ul>
+            <li>Idea of Custom HTML Elements</li>
+            <li class="next">API/Framework
                 <ul>
                     <li>Shadow DOM (Encapsulation)</li>
                     <li>HTML Imports</li>
                     <li>Template Binding</li>
                 </ul>
             </li>
-        </ol>
+        </ul>
         <a href="https://funnel.hasgeek.com/metarefresh2013/627-web-components-and-the-future-of-web-development">Web components and the future of web development</a> from MR 2013
     </section>
 
     <section class="slide">
-        <h2>Other Component engines</h2>
+        <h2>Alternatives for these APIs</h2>
+        <table>
+            <tr>
+                <th>WeComponents API</th><th>Alternative</th>
+            </tr>
+            <tr>
+                <td>Custom Elements</td><td>Component engines</td>
+            </tr>
+            <tr>
+                <td>Shadow DOM</td><td>BEM Methodology</td>
+            </tr>
+            <tr>
+                <td>Scoped CSS</td><td>BEM or OOCSS</td>
+            </tr>
+            <tr>
+                <td>HTML Imports</td><td>Build tools</td>
+            </tr>
+            <tr>
+                <td>Template Binding</td><td>Data binding</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide">
+        <h2>Many Component engines</h2>
         <ul>
-            <li>Polymer (Polyfill for WebComponents)</li>
-            <li class="next">X-Tag</li>
-            <li class="next">Component</li>
-            <li class="next">BEM Tools</li>
+            <li><a href="http://www.polymer-project.org/">Polymer</a> (Polyfill for WebComponents)</li>
+            <li><a href="http://www.x-tags.org/">X-Tag</a></li>
+            <li><a href="http://api.jqueryui.com/jQuery.widget/">jQuery UI</a> Widgets</li>
+            <li><a href="http://facebook.github.io/react/">React</a></li>
+            <li><a href="http://bem.info/">BEM Tools</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>BEM briefly</h2>
+        <ul>
+            <li>Avoid CSS cascade</li>
+            <li>Block &mdash; Custom Element</li>
+            <li>Element &mdash; Shadow DOM</li>
+            <li>Modifier &mdash; Component State</li>
         </ul>
         <a href="https://funnel.hasgeek.com/metarefresh2013/606-maintainable-frontend-development-with-bem">Maintainable frontend development with BEM</a> from MR 2013
     </section>
 
-    <section class="slide cover h c">
-        <h2>Let's build the Component! (image with twitter share button)</h2>
-        <div><img src=""/></div>
+    <section class="slide cover h c" style="background: #fff">
+        <h2>Let's build the Component!</h2>
+        <div><img src="pictures/my-share.jpg" alt="my-share Component"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Keep in mind that</h2>
+        <ul>
+            <li>Component is <strong>Simple</strong>
+                <ul>
+                    <li>KISS</li>
+                </ul>
+            </li>
+            <li>Component is <strong>Standalone</strong>
+                <ul>
+                    <li>Dependencies</li>
+                </ul>
+            </li>
+            <li>Component is <strong>Isolated</strong>
+                <ul>
+                    <li>Layout, CSS, JS</li>
+                </ul>
+            </li>
+        </ul>
     </section>
 
     <section class="slide">
@@ -253,8 +337,9 @@
     </section>
 
     <section class="slide">
-        <h2>Component private HTML</h2>
+        <h2>Component private HTML Layout</h2>
         <pre class="html">
+            <code>&lt;!-- my-share.html --&gt;</code>
             <code>&lt;a href="<mark>{{ href }}</mark>" class="my-share"&gt;</code>
             <code>    &lt;img src="<mark>{{ icon }}</mark>" class="my-share__icon"/&gt;</code>
             <code>    &lt;span class="my-share__label"&gt;<mark>{{ label }}</mark>&lt;/span&gt;</code>
@@ -269,8 +354,7 @@
             <code>&lt;a class="my-share"</code>
             <code>   data-href="<mark>{{ href }}</mark>"</code>
             <code>   data-icon="<mark>{{ icon }}</mark>"</code>
-            <code>   data-label="<mark>{{ label }}</mark>"</code>
-            <code>&gt;&lt;/a&gt;</code>
+            <code>&gt;<mark>{{ label }}</mark>&lt;/a&gt;</code>
         </pre>
         <p>This interface is close to the WebComponents.</p>
     </section>
@@ -281,8 +365,7 @@
             <code>&lt;my-share</code>
             <code>   href="<mark>{{ href }}</mark>"</code>
             <code>   icon="<mark>{{ icon }}</mark>"</code>
-            <code>   label="<mark>{{ label }}</mark>"</code>
-            <code>&gt;&lt;/my-share&gt;</code>
+            <code>&gt;<mark>{{ label }}</mark>&lt;/my-share&gt;</code>
         </pre>
     </section>
 
@@ -303,46 +386,59 @@
     <section class="slide">
         <h2>External dependencies</h2>
         <pre class="javascript">
-            <code>// Slide with dependencies in bower.json</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>JS for my-share Component</h2>
-        <pre class="javascript">
-            <code>// Include all requirements</code>
-            <code>var html = require('templates/my-share'),</code>
-            <code>    tpl = require('lodash-template'),</code>
-            <code>    domify = require('domify');</code>
-        </pre>
-    </section>
-
-    <section class="slide">
-        <h2>JS for my-share Component</h2>
-        <pre class="javascript">
-            <code>var template = tpl(html);</code>
-            <code>function MyShare(el) {</code>
-            <code>    this.options = el.dataset;</code>
-            <code>    this.el = domify(template(this.options));</code>
-            <code>    this._bindEvents();</code>
-            <code>    el.parentNode.replaceChild(this.el, el);</code>
+            <code>// bower.json</code>
+            <code>"dependencies": {</code>
+            <code>    "tpl": "azproduction/lodash-template",</code>
+            <code>    "domify": "component/domify",</code>
+            <code>    "decl": "azproduction/decl"</code>
             <code>}</code>
+        </pre>
+        <p>Declare all external dependencies.</p>
+    </section>
+
+    <section class="slide">
+        <h2>Component relations</h2>
+        <pre class="javascript">
+            <code>// my-share.js</code>
+            <code>var tpl = require('tpl'),</code>
+            <code>    decl = require('decl'),</code>
+            <code>    domify = require('domify');</code>
+            <code> </code>
+            <code>var html = require('templates/my-share'),</code>
+            <code>    template = tpl(html);</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Component logic</h2>
+        <pre class="javascript">
+            <code>function MyShare(el) {</code>
+            <code>    this.options = this.collectOptions(el);</code>
+            <code>    this.el = this.render();</code>
+            <code>    this.delegateEvents();</code>
+            <code>    this.replaceElement(el);</code>
+            <code>}</code>
+            <code>decl.register('.my-share', MyShare);</code>
             <code>module.exports = MyShare;</code>
         </pre>
     </section>
 
     <section class="slide">
-        <h2>Defining internal relations</h2>
-        <pre class="javascript">
-            <code>// This slide is incomplete</code>
-        </pre>
+        <h2>Assemble component</h2>
+        <ul>
+            <li>Resolve all requirements</li>
+            <li>Assemble scripts and templates</li>
+            <li>Concatenate styles</li>
+            <li><code>lmd build page-name</code></li>
+        </ul>
     </section>
 
     <section class="slide">
         <h2>Using my-share Component</h2>
-        <pre class="javascript">
-            <code>// This slide is incomplete</code>
-            <code>// Can be more than one slide</code>
+        <pre class="html">
+            <code>&lt;a class="my-share" ...&gt;<mark>Tweet</mark>&lt;/a&gt;</code>
+            <code>&lt;link rel="stylesheet" href="<mark>my-share.css</mark>"/&gt;</code>
+            <code>&lt;script src="<mark>my-share.js</mark>"&gt;&lt;/script&gt;</code>
         </pre>
     </section>
 
@@ -357,7 +453,7 @@
             <li>Stop propagation of Libraries</li>
             <li class="next">Write and use Components</li>
             <li class="next">WebComponents == API</li>
-            <li class="next">Many Component engines</li>
+            <li class="next">Try other Component engines</li>
         </ul>
     </section>
 

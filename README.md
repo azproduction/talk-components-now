@@ -62,19 +62,33 @@
    * ES5 everywhere
    * Polyfills fixes the rest
  * Component way (image)
-   * Components are Small
+   * Key features
+     * Simple
+       * KISS Principle
+       * Single responsibility
+     * Standalone
+     * Isolated
+   * Components are simple
      * Lightweight (example:size of some lib)
      * Only what you need (close to 100% of code usage)
      * Easy to understand (example:low CC)
-   * Standalone
+   * Components are standalone
      * Contain all dependencies
        * Most of them are external
      * Easier to reuse
        * (example:bower i component-name)
        * (example:npm i component-name)
-   * Package managers
-     * Bower
-     * Npm
+   * Components are isolated
+     * Do not interfere with others
+       * Scoped CSS
+       * Flexible layout
+     * Restricted access to others
+       * No globals
+       * `require()`
+   * Others ingredients
+     * Declarative
+     * Data-driven
+     * Lazy loaded
  * WebComponents
    * W3C way of components creation
    * Idea of Components
@@ -85,10 +99,12 @@
        * Styles isolation
      * HTML Imports
      * Template Binding
- * Other Components
+ * Component Frameworks
+   * Polymer
    * X-Tag
    * Component
    * jQuery UI Widgets
+   * React
    * BEM Tools
  * Let's build the Component!
    * Let it be Open Graph Share button
@@ -111,8 +127,7 @@
 <a class="my-share"
     data-href="{{ href }}"
     data-icon="{{ icon }}"
-    data-label="{{ label }}"
-></a>
+>{{ label }}</a>
 ```
 
 Relative to w3c style
@@ -121,8 +136,7 @@ Relative to w3c style
 <my-share
     href="{{ href }}"
     icon="{{ icon }}"
-    label="{{ label }}"
-></my-share>
+>{{ label }}</my-share>
 ```
 
 Or handlebars helper

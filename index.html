@@ -177,7 +177,7 @@
     </section>
 
     <section class="slide cover h w c" style="background: #fff">
-        <h2>Standalone & Isolated</h2>
+        <h2>Standalone</h2>
         <div><img src="pictures/stand-alone.jpg"/></div>
     </section>
 
@@ -197,6 +197,11 @@
             </li>
             <li class="next">It is simple to use a part</li>
         </ul>
+    </section>
+
+    <section class="slide cover h c">
+        <h2>Isolated</h2>
+        <div><img src="pictures/isolated.jpg"/></div>
     </section>
 
     <section class="slide">
@@ -243,6 +248,14 @@
             </li>
         </ul>
         <a href="https://funnel.hasgeek.com/metarefresh2013/627-web-components-and-the-future-of-web-development">Web components and the future of web development</a> from MR 2013
+    </section>
+
+    <section class="slide">
+        <h2>WebComponents in 2014</h2>
+        <ul>
+            <li>API Support</li>
+            <li>TODO</li>
+        </ul>
     </section>
 
     <section class="slide">
@@ -293,6 +306,13 @@
             <li>Modifier &mdash; Component State</li>
         </ul>
         <a href="https://funnel.hasgeek.com/metarefresh2013/606-maintainable-frontend-development-with-bem">Maintainable frontend development with BEM</a> from MR 2013
+    </section>
+
+    <section class="slide">
+        <h2>Slide with BEM example</h2>
+        <ul>
+            <li>TODO</li>
+        </ul>
     </section>
 
     <section class="slide cover h c" style="background: #fff">
@@ -384,16 +404,39 @@
 
     <section class="slide">
         <h2>CSS for my-share Component</h2>
-        <pre class="css">
-            <code>.my-share__icon {</code>
+        <pre class="html">
+            <code>.<mark>my-share</mark> {}</code>
+            <code>.my-share__<mark>icon</mark> {</code>
             <code>    vertical-align: middle;</code>
             <code>    height: 16px;</code>
             <code>}</code>
-            <code>.my-share__label {</code>
+            <code>.my-share__<mark>label</mark> {</code>
             <code>    padding-left: 5px;</code>
             <code>}</code>
         </pre>
-        <p>We remain font-size and text-decoration untouched.</p>
+    </section>
+
+    <section class="slide">
+        <h2>CSS for my-share WebComponent</h2>
+        <pre class="html">
+            <code><mark>my-share</mark> {}</code>
+            <code>.<mark>icon</mark> {</code>
+            <code>    vertical-align: middle;</code>
+            <code>    height: 16px;</code>
+            <code>}</code>
+            <code>.<mark>label</mark> {</code>
+            <code>    padding-left: 5px;</code>
+            <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>CSS is scoped(isolated)</h2>
+        <ul>
+            <li>In WebComponent's by API</li>
+            <li>BEM - naming</li>
+            <li>TODO</li>
+        </ul>
     </section>
 
     <section class="slide cover w c" style="background: #fff">
@@ -425,6 +468,13 @@
             <code>var html = require('templates/my-share'),</code>
             <code>    template = tpl(html);</code>
         </pre>
+    </section>
+
+    <section class="slide">
+        <h2>JavaScript module is isolated</h2>
+        <ul>
+            <li>TODO</li>
+        </ul>
     </section>
 
     <section class="slide">

@@ -286,3 +286,26 @@ th {
 table.striped tr:nth-child(even) {
     background:#EEE;
 }
+
+.slide ul.support li:before {
+    content: '';
+    width: 100px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.slide ul.support li.support_by_chrome:before {
+    background-image: url(../pictures/chrome_256x256.png);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: right center;
+}
+
+.slide ul.support li.support_by_chrome-ffn:before {
+    background-image: url(../pictures/chrome_256x256.png), url(../pictures/firefox-nightly_256x256.png);
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50px 50px, 50px 50px;
+    background-position: right center, left center;
+}

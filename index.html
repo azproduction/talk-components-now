@@ -444,11 +444,19 @@
     </section>
 
     <section class="slide">
-        <h2>CSS is scoped(isolated)</h2>
+        <h2>CSS is isolated</h2>
         <ul>
-            <li>In WebComponent's by API</li>
-            <li>BEM - naming</li>
-            <li>TODO</li>
+            <li>WebComponent &mdash; DOM API
+                <ul>
+                    <li><code>&lt;style scoped&gt;</code></li>
+                </ul>
+            </li>
+            <li class="next">BEM
+                <ul>
+                    <li>Avoid CSS cascade</li>
+                    <li>Naming conventions <code>.block__element</code></li>
+                </ul>
+            </li>
         </ul>
     </section>
 
@@ -484,13 +492,6 @@
     </section>
 
     <section class="slide">
-        <h2>JavaScript module is isolated</h2>
-        <ul>
-            <li>TODO</li>
-        </ul>
-    </section>
-
-    <section class="slide">
         <h2>Component logic</h2>
         <pre class="javascript">
             <code>function MyShare(el) {</code>
@@ -504,7 +505,17 @@
         </pre>
     </section>
 
-    <section class="slide cover h c">
+    <section class="slide">
+        <h2>JavaScript is isolated</h2>
+        <ul>
+            <li>No globals leak</li>
+            <li>Contains dependencies</li>
+            <li>Asks for requirements</li>
+            <li>Provides resources</li>
+        </ul>
+    </section>
+
+    <section class="slide cover h w c">
         <h2>Assemble</h2>
         <div><img src="pictures/build-site.jpg"/></div>
     </section>
@@ -556,10 +567,26 @@
         <div><img src=""/></div>
     </section>
 
+    <section class="slide cover w h c">
+        <h2>Before</h2>
+        <div><img src="pictures/before-1.png"/></div>
+        <div class="next"><img src="pictures/before-2.png"/></div>
+        <div class="next"><img src="pictures/before-3.png"/></div>
+        <div class="next"><img src="pictures/before-4.png"/></div>
+    </section>
+
+    <section class="slide cover w h c">
+        <h2>After</h2>
+        <div><img src="pictures/after-1.png"/></div>
+        <div class="next"><img src="pictures/after-2.png"/></div>
+        <div class="next"><img src="pictures/after-3.png"/></div>
+        <div class="next"><img src="pictures/after-4.png"/></div>
+    </section>
+
     <section class="slide">
         <h2>Conclusion</h2>
         <ul>
-            <li>Web Fixed, Mobile Growing</li>
+            <li>Web is Fixed, Mobile is Growing</li>
             <li class="next">Stop propagation of Libraries</li>
             <li class="next">Write and use Components</li>
             <li class="next">WebComponents == API</li>

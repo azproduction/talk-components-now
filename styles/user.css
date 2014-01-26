@@ -309,3 +309,12 @@ table.striped tr:nth-child(even) {
     background-size: 50px 50px, 50px 50px;
     background-position: right center, left center;
 }
+
+.slide.cover .next {
+    display: none;
+}
+
+body.list .slide.cover .next,
+.slide.cover .next.active {
+    display: block;
+}

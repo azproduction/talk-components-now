@@ -318,3 +318,7 @@ body.list .slide.cover .next,
 .slide.cover .next.active {
     display: block;
 }
+
+.slide ul.no-bullets > li:before {
+    content: '';
+}

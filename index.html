@@ -272,7 +272,7 @@
             <li class="support_by_chrome-ffn">Custom Elements</li>
             <li class="support_by_none">HTML Imports</li>
         </ul>
-        <p>It is possible to polyfill others.</p>
+        <p>It is possible to polyfill others using <a href="http://www.polymer-project.org/">Polymer</a>.</p>
     </section>
 
     <section class="slide">
@@ -305,7 +305,6 @@
     <section class="slide">
         <h2>Many Component engines</h2>
         <ul>
-            <li><a href="http://www.polymer-project.org/">Polymer</a> (Polyfill for WebComponents)</li>
             <li><a href="http://www.x-tags.org/">X-Tag</a></li>
             <li><a href="http://api.jqueryui.com/jQuery.widget/">jQuery UI</a> Widgets</li>
             <li><a href="http://facebook.github.io/react/">React</a></li>
@@ -330,10 +329,18 @@
 
     <section class="slide cover h c" style="background: #fff">
         <div><img src="pictures/block-elements.jpg"/></div>
+        <ul style="position: absolute; left: 36%; top: 65%" class="no-bullets">
+            <li class="next"><code>.tab-panel</code> &mdash; Block</li>
+            <li class="next"><code>.tab-panel__tab</code> &mdash; Element</li>
+            <li class="next"><code>.tab-panel__tab_state_active</code></li>
+        </ul>
+    </section>
+
+    <section class="slide shout">
+        <h2>Let's build the Component!</h2>
     </section>
 
     <section class="slide cover h c" style="background: #fff">
-        <h2>Let's build the Component!</h2>
         <div><img src="pictures/my-share.jpg" alt="my-share Component"/></div>
     </section>
 
@@ -513,9 +520,9 @@
         <h2>JavaScript is isolated</h2>
         <ul>
             <li>No globals leak</li>
-            <li>Contains dependencies</li>
-            <li>Asks for requirements</li>
-            <li>Provides resources</li>
+            <li>It contains all dependencies</li>
+            <li>It asks for requirements</li>
+            <li>It provides resources</li>
         </ul>
     </section>
 

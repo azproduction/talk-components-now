@@ -19,14 +19,6 @@
 		<img src="images/yandex.svg" class="yandex"/>
 	</section>
 
-    <section class="slide first"><div class="arrow">
-    	<img src="images/yandex.svg" class="yandex"/>
-		<h2>Components Now!</h2>
-        <div class="info">
-            <p class="author">Mikhail Davydov</p>
-        </div>
-    </div></section>
-
     <section class="slide">
         <h2>About myself</h2>
         <ul>
@@ -34,6 +26,14 @@
         </ul>
         <p>This section is incomplete</p>
     </section>
+
+    <section class="slide first"><div class="arrow">
+    	<img src="images/yandex.svg" class="yandex"/>
+		<h2>Components Now!</h2>
+        <div class="info">
+            <p class="author">Mikhail Davydov</p>
+        </div>
+    </div></section>
 
     <section class="slide cover h c">
         <h2>Code libraries</h2>
@@ -298,6 +298,7 @@
         <ul>
             <li><a href="http://www.x-tags.org/">X-Tag</a></li>
             <li><a href="http://api.jqueryui.com/jQuery.widget/">jQuery UI</a> Widgets</li>
+            <li><a href="http://dojotoolkit.org/reference-guide/1.9/quickstart/writingWidgets.html">Dojo</a> Widgets</li>
             <li><a href="http://facebook.github.io/react/">React</a></li>
             <li><a href="http://bem.info/">BEM Tools</a></li>
         </ul>
@@ -510,10 +511,14 @@
     <section class="slide">
         <h2>JavaScript is isolated</h2>
         <ul>
-            <li>No globals leak</li>
-            <li>It contains all dependencies</li>
-            <li>It asks for requirements</li>
-            <li>It provides resources</li>
+            <li><a href="http://wiki.commonjs.org/wiki/Modules/1.0">CommonJS/Modules</a>
+                <ul>
+                    <li>No globals leak</li>
+                    <li>It asks for requirements</li>
+                    <li>It provides resources</li>
+                </ul>
+            </li>
+            <li><a href="http://requirejs.org/docs/whyamd.html">AMD</a> can be used too</li>
         </ul>
     </section>
 

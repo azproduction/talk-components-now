@@ -7,7 +7,7 @@ module.exports = function (grunt) {
         },
         autoprefixer: {
             example: {
-                src: '_index.css'
+                src: 'index.css'
             }
         }
     });

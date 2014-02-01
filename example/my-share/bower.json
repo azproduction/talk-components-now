@@ -1,0 +1,11 @@
+{
+    "name": "my-share",
+    "version": "1.0.0",
+    "main": ["index.js", "index.css"],
+    "dependencies": {
+        "tpl": "azproduction/lodash-template",
+        "domify": "component/domify",
+        "decl": "azproduction/decl"
+    },
+    "private": true
+}

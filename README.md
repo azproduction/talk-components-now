@@ -149,13 +149,13 @@ Or handlebars helper
 
 ```css
 .my-share__icon {
-    vertical-align: middle;
-    height: 16px;
-}
+     vertical-align: middle;
+     height: 16px;
+ }
 
-.my-share__label {
-    padding-left: 5px;
-}
+ .my-share__label {
+     padding-left: 5px;
+ }
 ```
 
    * JS

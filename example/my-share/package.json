@@ -1,0 +1,10 @@
+{
+    "name": "my-share",
+    "version": "1.0.0",
+    "private": true,
+    "devDependencies": {
+        "grunt": "*",
+        "grunt-lmd": "*",
+        "grunt-autoprefixer": "*"
+    }
+}

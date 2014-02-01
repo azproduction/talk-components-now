@@ -1,0 +1,25 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100%;
+    text-align: center;
+}
+
+body:after {
+    display: inline-block;
+    height: 100%;
+    content: '';
+    vertical-align: middle;
+}
+
+.my-share {
+    transform: scale(10);
+
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -1,0 +1,14 @@
+{
+    "name": "my-share build",
+    "root": "../bower_components",
+    "modules": {
+        "decl": "decl/index.js",
+        "domify": "domify/index.js",
+        "tpl": "tpl/index.js",
+
+        "templates/my-share": "../lib/my-share.html"
+    },
+    "styles": [
+        "../lib/my-share.css"
+    ]
+}

@@ -1,8 +1,8 @@
 {
     "name": "my-share example",
     "root": "../",
-    "output": "_index.js",
-    "styles_output": "_index.css",
+    "output": "index.js",
+    "styles_output": "index.css",
 
     "modules": {
         "ui/my-share": "lib/my-share.js",

@@ -322,3 +322,7 @@ body.list .slide.cover .next,
 .slide ul.no-bullets > li:before {
     content: '';
 }
+
+.slide ul.small-list li {
+    font-size: 20px;
+}

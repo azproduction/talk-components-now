@@ -38,8 +38,9 @@
 		}
 	.list .slide:after {
 		position:absolute;
-		left:120px;
-		bottom:60px;
+        bottom: 30px;
+        left: auto;
+        right: 30px;
 		color:#CCC;
 		text-shadow:none;
 		line-height:18px;

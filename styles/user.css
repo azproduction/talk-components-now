@@ -297,17 +297,11 @@ table.striped tr:nth-child(even) {
 }
 
 .slide ul.support li.support_by_chrome:before {
-    background-image: url(../pictures/chrome_256x256.png);
-    background-repeat: no-repeat;
-    background-size: 50px 50px;
-    background-position: right center;
+    background: url(../pictures/chrome.png) right center;
 }
 
 .slide ul.support li.support_by_chrome-ffn:before {
-    background-image: url(../pictures/chrome_256x256.png), url(../pictures/firefox-nightly_256x256.png);
-    background-repeat: no-repeat, no-repeat;
-    background-size: 50px 50px, 50px 50px;
-    background-position: right center, left center;
+    background: url(../pictures/chrome-ff.png) right center;
 }
 
 .slide.cover .next {

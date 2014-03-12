@@ -1,0 +1,643 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+	<title>Components Now!</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1274, user-scalable=no">
+	<link rel="stylesheet" href="../styles/screen.css">
+	<link rel="stylesheet" href="../styles/print.css" media="print">
+
+    <link rel="stylesheet" href="../styles/idea.min.css">
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>Components Now!</h1>
+		<a href="http://twitter.com/azproduction">Михаил Давыдов</a>
+	</header>
+
+	<section class="slide null">
+		<img src="../images/yandex_lang_ru.svg" class="yandex"/>
+	</section>
+
+    <section class="slide first"><div class="arrow">
+    	<img src="../images/yandex_lang_ru.svg" class="yandex"/>
+		<h2>Components Now!</h2>
+        <div class="info">
+            <p class="author">Михаил Давыдов</p>
+            <p class="location">DUMP, 14 Марта 2014</p>
+        </div>
+    </div></section>
+
+    <section class="slide cover h c">
+        <h2>Библиотеки</h2>
+        <div><img src="../pictures/books.jpg"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Библиотеки</h2>
+        <ul>
+            <li>jQuery &mdash; чинит DOM</li>
+            <li class="next">Underscore &mdash; добавляет API ECMAScript 5</li>
+            <li class="next">Backbone &mdash; приносит MV*</li>
+            <li class="next">Все они созданы для исправления Web</li>
+        </ul>
+        <p>По историческим причинм хорошие инструменты - библиотеки.<br/>
+            <a href="http://ejohn.org/blog/the-dom-is-a-mess/">The DOM is a Mess</a> 2009
+        </p>
+    </section>
+
+    <section class="slide cover h c">
+        <h2>Библиотеки везде</h2>
+        <div><img src="../pictures/library.jpg"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Библиотеки большие</h2>
+        <ul>
+            <li>Тяжелые
+                <ul>
+                    <li>jQuery 2.0.3 &mdash; 230K (не сжатый)</li>
+                </ul>
+            </li>
+            <li class="next">Их сложно понять
+                <ul>
+                    <li>Цикломатическая сложность $.ajax &mdash; <a href="http://es-analysis.github.io/plato/examples/jquery/files/src_ajax_js/index.html">43</a></li>
+                </ul>
+            </li>
+            <li class="next">Слишком могущественные
+                <ul>
+                    <li>$.ajax, $.animate, _</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Их части тесно связаны</h2>
+        <ul>
+            <li>Сложно использовать только маленькую часть
+                <ul>
+                    <li>$.Deferred, $.ajax</li>
+                    <li>_.template</li>
+                </ul>
+            </li>
+            <li>Приходится делить вручную</li>
+            <li>Их модульность мало помогает</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Управление зависимостями</h2>
+        <ul>
+            <li>Все хотят jQuery</li>
+            <li class="next">Библиотеки зависят от библиотек
+                <ul>
+                    <li>Backbone+jQuery+Underscore</li>
+                </ul>
+            </li>
+            <li class="next">Ручное управление зависимостями
+                <ul>
+                    <li>Bower и Npm &mdash; спасители!</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide cover w c">
+        <h2>Веб починили*</h2>
+        <div><img src="../pictures/filled-gap.jpg"/></div>
+    </section>
+
+    <section class="slide cover h w c">
+        <div><a href="http://acid3.acidtests.org/"><img src="../pictures/acid3.jpg" alt="ACID3 test result"/></a></div>
+    </section>
+
+    <section class="slide">
+        <h2>Важные DOM APIs</h2>
+        <ul>
+            <li>querySelector</li>
+            <li>CSS3 Selectors*</li>
+            <li>Web Storage (localStorage)</li>
+            <li>Cross-Origin Resource Sharing*</li>
+        </ul>
+        <p>* полностью с полифилами<br/>
+            <a href="http://caniuse.com/">Can I Use</a>
+        </p>
+    </section>
+
+    <section class="slide cover h w c">
+        <h2>ECMAScript 5</h2>
+        <div><a href="http://kangax.github.io/es5-compat-table/"><img src="../pictures/es5-compat.png" alt="ECMAScript 5 compatibility table"/></a></div>
+    </section>
+
+    <section class="slide">
+        <h2>Полифилы чинят остальное</h2>
+        <ul>
+            <li><a href="http://selectivizr.com/">CSS3 Selectors</a> (медленный, но работает)</li>
+            <li><a href="https://github.com/flensed/flXHR">Cross-Origin Resource Sharing</a></li>
+            <li><a href="https://code.google.com/p/html5shiv/">HTML5 Elements</a></li>
+            <li><a href="https://github.com/es-shims/es5-shim/">ECMAScript 5</a></li>
+        </ul>
+        <p><a href="http://html5please.com/#polyfill">HTML5 Please polyfills</a></p>
+    </section>
+
+    <section class="slide cover w c">
+        <h2>Мобильный Web не болеет</h2>
+        <div><img src="../pictures/mobile-score.jpg"/></div>
+    </section>
+
+    <section class="slide cover w c">
+        <h2>Мобильный рынок растет</h2>
+        <div><img src="../pictures/mobile-growth.jpg"/></div>
+    </section>
+
+    <section class="slide shout">
+        <h2>Почему мы все еще используем библиотеки?</h2>
+    </section>
+
+    <section class="slide cover h w c" style="background: #fff">
+        <h2>Компоненты</h2>
+        <div><img src="../pictures/block.jpg"/></div>
+    </section>
+
+    <section class="slide cover h w c" style="background: #fff">
+        <h2>Простые</h2>
+        <div><img src="../pictures/board.jpg"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Компоненты простые</h2>
+        <ul>
+            <li>Легкие
+                <ul>
+                    <li><a href="https://github.com/component/dom">dom</a> &mdash; 28K, 3K self (не сжатый)</li>
+                </ul>
+            </li>
+            <li class="next">Единственная ответственность & KISS-принцип</li>
+            <li class="next">Очень легко понять
+                <ul>
+                    <li>Поддерживать</li>
+                    <li>Писать тесты</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide cover h w c" style="background: #fff">
+        <h2>Независимые</h2>
+        <div><img src="../pictures/stand-alone.png"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Компоненты независимы</h2>
+        <ul>
+            <li>Содержат все зависимости
+                <ul>
+                    <li>Большая часть внешние</li>
+                </ul>
+            </li>
+            <li class="next">Легко использовать повторно
+                <ul>
+                    <li><code>bower i name</code></li>
+                    <li><code>npm i name</code></li>
+                </ul>
+            </li>
+            <li class="next">Легко использовать только часть</li>
+        </ul>
+    </section>
+
+    <section class="slide cover h c">
+        <h2>Изолированные</h2>
+        <div><img src="../pictures/isolated.jpg"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Компоненты изолированы</h2>
+        <ul>
+            <li>Не конфликтуют с другими
+                <ul>
+                    <li>Изоляция CSS</li>
+                    <li>Гибкое представление</li>
+                    <li>Нет утечек глобалов</li>
+                </ul>
+            </li>
+            <li class="next">Имеют ограниченный доступ к другим
+                <ul>
+                    <li><code>require()</code></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide cover h c" style="background: #fff">
+        <div><img src="../pictures/web-components.jpg" alt="WebComponents"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>WebComponents</h2>
+        <ul>
+            <li>Идея произвольного HTML элемента</li>
+            <li class="next">API/Framework
+                <ul>
+                    <li>Shadow DOM (Инкапсуляция)</li>
+                    <li>HTML Imports & Templates</li>
+                    <li>Template Binding</li>
+                </ul>
+            </li>
+        </ul>
+        <a href="https://www.youtube.com/watch?v=fqULJBBEVQE">Web Components: A Tectonic Shift for Web Development</a>
+    </section>
+
+    <section class="slide">
+        <h2>WebComponents в 2014 году</h2>
+        <ul class="support">
+            <li class="support_by_chrome-ffn">HTML Templates</li>
+            <li class="support_by_chrome">Shadow DOM</li>
+            <li class="support_by_chrome-ffn">Custom Elements</li>
+            <li class="support_by_chrome">HTML Imports</li>
+        </ul>
+        <p>Возможно починить в других барузерах, используя <a href="http://www.polymer-project.org/">Polymer</a>.</p>
+    </section>
+
+    <section class="slide">
+        <h2>Альтернативы этим API</h2>
+        <table>
+            <tr>
+                <th>WebComponents API</th><th>Альтернатива</th>
+            </tr>
+            <tr>
+                <td>Custom Elements</td><td>Компонентные движки</td>
+            </tr>
+            <tr>
+                <td>Shadow DOM</td><td>BEM Методология</td>
+            </tr>
+            <tr>
+                <td>HTML Templates</td><td>Шаблонные движки</td>
+            </tr>
+            <tr>
+                <td>HTML Imports</td><td>Инструменты сборки</td>
+            </tr>
+            <tr>
+                <td>Scoped CSS</td><td>BEM или OOCSS</td>
+            </tr>
+            <tr>
+                <td>Template Binding</td><td>Data binding</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="slide">
+        <h2>Компонентные движки</h2>
+        <ul>
+            <li><a href="http://www.x-tags.org/">X-Tag</a></li>
+            <li><a href="http://api.jqueryui.com/jQuery.widget/">jQuery UI</a> Widgets</li>
+            <li><a href="http://dojotoolkit.org/reference-guide/1.9/quickstart/writingWidgets.html">Dojo</a> Widgets</li>
+            <li><a href="http://facebook.github.io/react/">React</a></li>
+            <li><a href="http://bem.info/">bem-tools</a></li>
+            <li><a href="http://basisjs.com/">basis.js</a></li>
+        </ul>
+    </section>
+
+    <section class="slide cover h c" style="background: #fff">
+        <div><img src="../pictures/bem.jpg"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>БЕМ и WebComponents</h2>
+        <ul>
+            <li>Изоляция CSS</li>
+            <li class="next">Блок &mdash; Custom Element</li>
+            <li class="next">Элемент &mdash; Shadow DOM</li>
+            <li class="next">Модификатор &mdash; Нет аналога</li>
+            <li class="next"><a href="http://ru.bem.info/tutorials/articles/bem-js-tutorial/">i-bem</a> &mdash; Логика блока</li>
+        </ul>
+    </section>
+
+    <section class="slide cover h c" style="background: #fff">
+        <div><img src="../pictures/block-elements.jpg"/></div>
+        <ul style="position: absolute; left: 36%; top: 65%" class="no-bullets">
+            <li class="next"><code>.tab-panel</code> &mdash; Блок</li>
+            <li class="next"><code>.tab-panel__tab</code> &mdash; Элемент</li>
+            <li class="next"><code>.tab-panel__tab_state_active</code></li>
+        </ul>
+    </section>
+
+    <section class="slide shout">
+        <h2>Давайте напишем Компонент!</h2>
+    </section>
+
+    <section class="slide cover h c" style="background: #fff">
+        <div><img src="../pictures/my-share.jpg" alt="my-share Component"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Помним, что</h2>
+        <ul>
+            <li>Компонент <strong>Простой</strong>
+                <ul>
+                    <li>KISS</li>
+                </ul>
+            </li>
+            <li>Компонент <strong>Независимый</strong>
+                <ul>
+                    <li>Зависимости</li>
+                </ul>
+            </li>
+            <li>Компонент <strong>Изолированный</strong>
+                <ul>
+                    <li>HTML, CSS, JS</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide cover w c" style="background: #fff">
+        <h2>Package file</h2>
+        <div><img src="../pictures/contract.jpg"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Package file это контракт</h2>
+        <pre class="javascript">
+            <code>// bower.json</code>
+            <code>{</code>
+            <code>    "name": "my-share",</code>
+            <code>    "version": "1.0.0",</code>
+            <code>    "main": ["my-share.js"]</code>
+            <code>}</code>
+        </pre>
+        <p><a href="http://bower.io/">Bower</a> и формат <a href="http://bower.io/#defining-a-package">bower.json</a></p>
+    </section>
+
+    <section class="slide cover w c" style="background: #fff">
+        <h2>HTML</h2>
+        <div><img src="../pictures/plan.jpg"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Приватный HTML</h2>
+        <pre class="html">
+            <code>&lt;!-- my-share.html --&gt;</code>
+            <code>&lt;a href="<mark>{{ href }}</mark>" class="my-share"&gt;</code>
+            <code>    &lt;img src="<mark>{{ icon }}</mark>" class="my-share__icon"/&gt;</code>
+            <code>    &lt;span class="my-share__label"&gt;<mark>{{ label }}</mark>&lt;/span&gt;</code>
+            <code>&lt;/a&gt;</code>
+        </pre>
+    </section>
+
+    <section class="slide cover w c" style="background: #fff">
+        <h2>Интерфейс</h2>
+        <div><img src="../pictures/door.jpg"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Интерфейс компонента</h2>
+        <pre class="html">
+            <code>&lt;a class="my-share"</code>
+            <code>   data-href="<mark>{{ href }}</mark>"</code>
+            <code>   data-icon="<mark>{{ icon }}</mark>"</code>
+            <code>&gt;<mark>{{ label }}</mark>&lt;/a&gt;</code>
+        </pre>
+        <p>Интерфейс похож на Custom Element из WebComponents.</p>
+    </section>
+
+    <section class="slide">
+        <h2>WebComponents для сравнения</h2>
+        <pre class="html">
+            <code>&lt;my-share</code>
+            <code>   href="<mark>{{ href }}</mark>"</code>
+            <code>   icon="<mark>{{ icon }}</mark>"</code>
+            <code>&gt;<mark>{{ label }}</mark>&lt;/my-share&gt;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>CSS Компонента</h2>
+        <pre class="html">
+            <code>.<mark>my-share</mark> {}</code>
+            <code>.my-share__<mark>icon</mark> {</code>
+            <code>    vertical-align: middle;</code>
+            <code>    height: 16px;</code>
+            <code>}</code>
+            <code>.my-share__<mark>label</mark> {</code>
+            <code>    padding-left: 5px;</code>
+            <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>CSS WebComponent</h2>
+        <pre class="html">
+            <code><mark>my-share</mark> {}</code>
+            <code>.<mark>icon</mark> {</code>
+            <code>    vertical-align: middle;</code>
+            <code>    height: 16px;</code>
+            <code>}</code>
+            <code>.<mark>label</mark> {</code>
+            <code>    padding-left: 5px;</code>
+            <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>CSS изолирован</h2>
+        <ul>
+            <li>WebComponent &mdash; DOM API
+                <ul>
+                    <li><code>&lt;style scoped&gt;</code></li>
+                </ul>
+            </li>
+            <li class="next">BEM
+                <ul>
+                    <li>Избегание каскада в CSS</li>
+                    <li>Соглашения именования <code>.block__element</code></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide cover w c" style="background: #fff">
+        <h2>Зависимости</h2>
+        <div><img src="../pictures/deps.jpg"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Внешние зависимости</h2>
+        <pre class="javascript">
+            <code>// bower.json</code>
+            <code>"dependencies": {</code>
+            <code>    "tpl": "azproduction/lodash-template",</code>
+            <code>    "domify": "component/domify",</code>
+            <code>    "decl": "azproduction/decl"</code>
+            <code>}</code>
+        </pre>
+        <p>Декларируем все зависимости.</p>
+    </section>
+
+    <section class="slide">
+        <h2>Связи модуля с другими</h2>
+        <pre class="javascript">
+            <code>// my-share.js</code>
+            <code>var tpl = require('tpl'),</code>
+            <code>    decl = require('decl'),</code>
+            <code>    domify = require('domify');</code>
+            <code> </code>
+            <code>var html = require('templates/my-share'),</code>
+            <code>    template = tpl(html);</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>Базовая логика компонента</h2>
+        <pre class="javascript">
+            <code>function MyShare(el) {</code>
+            <code>    this.options = this.collectOptions(el);</code>
+            <code>    this.el = this.render();</code>
+            <code>    this.delegateEvents();</code>
+            <code>    this.replaceElement(el);</code>
+            <code>}</code>
+            <code>decl('.my-share', MyShare);</code>
+            <code>module.exports = MyShare;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>JavaScript модуля изолирован</h2>
+        <ul>
+            <li><a href="http://wiki.commonjs.org/wiki/Modules/1.0">CommonJS/Modules</a>
+                <ul>
+                    <li>Нет утечек глобалов</li>
+                    <li>Просит зависимости, а не берет их</li>
+                    <li>Поставляет ресурсы</li>
+                </ul>
+            </li>
+            <li>Так же можно использовать <a href="http://requirejs.org/docs/whyamd.html">AMD</a></li>
+        </ul>
+    </section>
+
+    <section class="slide cover h w c">
+        <h2>Сборка</h2>
+        <div><img src="../pictures/build-site.png"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Сборка компонента</h2>
+        <ul>
+            <li>Получение всех зависимостей</li>
+            <li class="next">Компиляция
+                <ul>
+                    <li>стили, скрипты, шаблоны</li>
+                </ul>
+            </li>
+            <li class="next">Упаковка скриптов и шаблонов</li>
+            <li class="next">Конкатинация стилей</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Инструменты сборки компонентов</h2>
+        <ul>
+            <li><a href="http://bem.info/tools/bem/bem-tools/">bem-tools</a></li>
+            <li><a href="https://github.com/component/component">Component</a></li>
+            <li><a href="http://browserify.org/">Browserify</a></li>
+            <li><a href="http://lmdjs.org/">LMD</a></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Компонент легко использовать</h2>
+        <pre class="html">
+            <code>&lt;a class="my-share" ...&gt;<mark>Tweet</mark>&lt;/a&gt;</code>
+            <code>&lt;link rel="stylesheet" href="<mark>my-share.css</mark>"/&gt;</code>
+            <code>&lt;script src="<mark>my-share.js</mark>"&gt;&lt;/script&gt;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2>WebComponent</h2>
+        <pre class="html">
+            <code>&lt;my-share ...&gt;<mark>Tweet</mark>&lt;/my-share&gt;</code>
+            <code>&lt;link rel="import" href="<mark>my-share.html</mark>"/&gt;</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 style="position: absolute">Живой пример</h2>
+        <iframe src="../example/my-share/index.html" frameborder="0" style="width: 100%; height: 100%"></iframe>
+    </section>
+
+    <section class="slide cover w h c" style="background: #fff">
+        <div><img src="../pictures/before-1.png"/></div>
+        <div class="next"><img src="../pictures/before-2.png"/></div>
+        <div class="next"><img src="../pictures/before-3.png"/></div>
+        <div class="next"><img src="../pictures/before-4.png"/></div>
+    </section>
+
+    <section class="slide cover w h c" style="background: #fff">
+        <div><img src="../pictures/after-1.png"/></div>
+        <div class="next"><img src="../pictures/after-2.png"/></div>
+        <div class="next"><img src="../pictures/after-3.png"/></div>
+        <div class="next"><img src="../pictures/after-4.png"/></div>
+    </section>
+
+    <section class="slide">
+        <h2>Заключение</h2>
+        <ul>
+            <li>Web уже починили, Mobile растет</li>
+            <li class="next">Библиотеки слишком сложны</li>
+            <li class="next">WebComponents == API</li>
+            <li class="next">Пишите компоненты. Сегодня!</li>
+        </ul>
+    </section>
+
+    <div class="slide last">
+        <img src="../images/yandex_lang_ru.svg" class="yandex"/>
+        <h2>Components Now!</h2>
+        <div class="info">
+            <p class="author">Михаил Давыдов</p>
+            <p class="author social">
+                <a href="http://habrahabr.ru/users/azproduction"><img src="../images/js.svg" alt=""/></a><a href="http://github.com/azproduction"><img src="../images/github.svg" alt=""/></a><a href="http://twitter.com/azproduction"><img src="../images/twitter.svg" alt=""/></a><a href="http://twitter.com/azproduction">@azproduction</a>
+            </p>
+        </div>
+    </div>
+
+    <section class="slide">
+        <h2>Полезные ресусы</h2>
+        <ul>
+            <li><a href="http://bit.ly/1dUEgZB">Rjl my-share</a></li>
+            <li><a href="http://youmightnotneedjquery.com/">You might not need jQuery</a></li>
+            <li><a href="http://bem.info/">BEM Методология</a></li>
+            <li><a href="http://www.webcomponentsshift.com/">Web Components</a></li>
+            <li><a href="http://www.polymer-project.org/">Polymer Project</a></li>
+        </ul>
+    </section>
+
+    <section class="slide cover c qr-code">
+        <a href="http://clck.ru/97Zm8">clck.ru/97Zm8</a>
+        <img src="../pictures/qr_lang_ru.gif" alt="">
+    </section>
+
+    <section class="slide">
+        <h2>Источники изображений</h2>
+        <ul class="small-list">
+            <li><a href="http://minecraft.gamepedia.com/Blocks">minecraft.gamepedia.com/Blocks</a></li>
+            <li><a href="http://fr.fotopedia.com/wiki/Bibliothèque#!/items/flickr-6899137527">fr.fotopedia.com/wiki/Bibliothèque#!/items/flickr-6899137527</a></li>
+            <li><a href="http://www.planetminecraft.com/project/minecraft-site/">www.planetminecraft.com/project/minecraft-site/</a></li>
+            <li><a href="http://investments.academic.ru/1513/Форвардный_контракт">investments.academic.ru/1513/Форвардный_контракт</a></li>
+            <li><a href="http://frozen-lama.deviantart.com/art/Minecraft-Compound-Door-209872466">frozen-lama.deviantart.com/art/Minecraft-Compound-Door-209872466</a></li>
+            <li><a href="http://www.postandcourier.com/article/20120620/pc1002/120629985">www.postandcourier.com/article/20120620/pc1002/120629985</a></li>
+            <li><a href="http://isintu.com/features/responsive-design/">isintu.com/features/responsive-design/</a></li>
+            <li><a href="http://nicolaijuhler.wordpress.com/">nicolaijuhler.wordpress.com/</a></li>
+            <li><a href="http://r3c0nic.deviantart.com/art/minecraft-Blueprint-293455933">r3c0nic.deviantart.com/art/minecraft-Blueprint-293455933</a></li>
+            <li><a href="http://ru-wallp.com/view/1542/">ru-wallp.com/view/1542/</a></li>
+        </ul>
+    </section>
+
+	<div class="progress"><div></div></div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/highlight.min.js"></script>
+    <script src="../js/shower/shower.min.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>
